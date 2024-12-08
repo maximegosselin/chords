@@ -18,7 +18,7 @@ main {
 
 main section {
     display: flex;
-    gap: 16px;
+    gap: 32px;
 }
 
 h2 {
@@ -28,21 +28,30 @@ h2 {
 }
 
 .chord {
+    display: flex;
+    flex-direction: column;
+}
+
+.fretboard {
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
     display: grid;
 }
 
-.chord--2frets {
-    grid-template-columns: 1fr 1fr;
+.fretboard--2frets {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.chord--3frets {
-    grid-template-columns: 1fr 1fr 1fr;
+.fretboard--3frets {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.chord--4frets {
-    grid-template-columns: 1fr 1fr 1fr;
+.fretboard--4frets {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fretboard--5frets {
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .fret {
@@ -95,4 +104,9 @@ h2 {
 
 .fret span.note--root {
     background-color: blue;
+}
+
+.description {
+    font-size: 12px;
+    text-align: center;
 }
