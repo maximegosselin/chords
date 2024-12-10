@@ -33,6 +33,7 @@ h2 {
 }
 
 .fretboard {
+    background-color: #EFEBE9;
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
     display: grid;
@@ -52,6 +53,10 @@ h2 {
 
 .fretboard--5frets {
     grid-template-columns: repeat(5, 1fr);
+}
+
+.fretboard--6frets {
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .fret {
@@ -88,7 +93,7 @@ h2 {
 
 .fret span {
     align-items: center;
-    background-color: #aaaaaa;
+    background-color: #9E9E9E;
     border-radius: 8px;
     color: white;
     content: attr(data-fretted);
@@ -103,7 +108,7 @@ h2 {
 }
 
 .fret span.note--root {
-    background-color: blue;
+    background-color: #3F51B5;
 }
 
 .description {
