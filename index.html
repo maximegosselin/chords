@@ -21,7 +21,7 @@
                             <template x-for="fret in fretCount(pattern)">
                                 <span class="fret">
                                     <template x-if="frettedNote(pattern, string, fret)">
-                                        <span x-text="frettedNote(pattern, string, fret)" :class="{'note--root' : frettedNote(pattern, string, fret) === 'R'}"></span>
+                                        <span x-text="frettedNote(pattern, string, fret)" :class="frettedNoteModifierClass(pattern, string, fret)"></span>
                                     </template>
                                 </span>
                             </template>
@@ -50,6 +50,16 @@
                 }
             }
             return '';
+        },
+        frettedNoteModifierClass(pattern, string, fret) {
+            return {
+                'R': 'note--root',
+                'm3': 'note--minor3rd',
+                'M3': 'note--major3rd',
+                'P5': 'note--perfect5th',
+                'm7': 'note--minor7th',
+                'M7': 'note--major7th',
+            }[this.frettedNote(pattern, string, fret)] ?? null;
         },
         chordDesc(pattern) {
             return pattern.split('/')[2];

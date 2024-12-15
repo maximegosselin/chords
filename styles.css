@@ -90,7 +90,6 @@ h2 {
     z-index: 1;
 }
 
-
 .fret span {
     align-items: center;
     background-color: #9E9E9E;
@@ -109,6 +108,20 @@ h2 {
 
 .fret span.note--root {
     background-color: #3F51B5;
+}
+
+.fret span.note--minor3rd,
+.fret span.note--major3rd {
+    background-color: #009688;
+}
+
+.fret span.note--perfect5th {
+    background-color: #2196F3;
+}
+
+.fret span.note--minor7th,
+.fret span.note--major7th {
+    background-color: #673AB7;
 }
 
 .description {
