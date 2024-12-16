@@ -24,6 +24,7 @@ main section {
 h2 {
     font-weight: 500;
     margin: 0;
+    min-width: 300px;
     width: 300px;
 }
 
@@ -33,7 +34,6 @@ h2 {
 }
 
 .fretboard {
-    background-color: #EFEBE9;
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
     display: grid;
@@ -92,9 +92,9 @@ h2 {
 
 .fret span {
     align-items: center;
-    background-color: #9E9E9E;
+    background-color: #E0E0E0;
     border-radius: 8px;
-    color: white;
+    color: black;
     content: attr(data-fretted);
     display: flex;
     font-size: 12px;
@@ -107,21 +107,33 @@ h2 {
 }
 
 .fret span.note--root {
-    background-color: #3F51B5;
+    background-color: #424242;
+    color: white;
 }
 
-.fret span.note--minor3rd,
+.fret span.note--minor3rd {
+    background-color: #26A69A;
+    color: white;
+}
+
 .fret span.note--major3rd {
-    background-color: #009688;
+    background-color: #00695C;
+    color: white;
 }
 
 .fret span.note--perfect5th {
-    background-color: #2196F3;
+    background-color: #9E9E9E;
+    color: white;
 }
 
-.fret span.note--minor7th,
+.fret span.note--minor7th {
+    background-color: #7E57C2;
+    color: white;
+}
+
 .fret span.note--major7th {
-    background-color: #673AB7;
+    background-color: #4527A0;
+    color: white;
 }
 
 .description {
