@@ -10,6 +10,10 @@ html {
     font-weight: 400;
 }
 
+h1 {
+    font-weight: 600;
+}
+
 main {
     display: flex;
     flex-direction: column;
